@@ -488,4 +488,7 @@
  STATE_487:0 "Overijssel"
  STATE_488:0 "Drenthe"
  STATE_489:0 "Groningen"
- STATE_490:0 "Friesland"
+ STATE_490:1 "Cagliari"
+ STATE_491:0 "Ogliastra"
+ STATE_492:2 "Sassari"
+ STATE_493:2 "Olbia-Tempio"
