@@ -1,5 +1,5 @@
 focus_tree = {
-	id = Belgium
+	id = belgium
 	country = {
 		factor = 0
 		modifier = {
@@ -7,6 +7,44 @@ focus_tree = {
 			tag = BEL
 		}
 	}
+	#Focus for Make Them Pay for Every Inch
+	focus = {
+		id = BEL_makethempayforeveryinch
+		icon = GFX_goal_unknown
+		x = 6
+		y = 6
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = BEL_fortifymajorindustrialcenters 
+		}
+		prerequisite = { 
+			focus = BEL_hollandline 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for The Last Stand
+	focus = {
+		id = BEL_thelaststand
+		icon = GFX_goal_unknown
+		x = 2
+		y = 6
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = BEL_liquidatewallonianindustry 
+		}
+		prerequisite = { 
+			focus = BEL_fortressantwerp 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
 	#Focus for Request Equipment from Germany
 	focus = {
 		id = BEL_requestequipmentfromgermany
@@ -104,6 +142,20 @@ focus_tree = {
 			focus = BEL_fortressflanders 
 			focus = BEL_donotyieldaninch 
 		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Arm The People
+	focus = {
+		id = BEL_armthepeople
+		icon = GFX_goal_unknown
+		x = 8
+		y = 7
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = BEL_makethempayforeveryinch }
 		ai_will_do = {
 			factor = 1
 		}
@@ -417,6 +469,37 @@ focus_tree = {
 		mutually_exclusive = { 
 			focus = BEL_offeraccess 
 		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Shoot Down Their Falcons!
+	focus = {
+		id = BEL_shootdowntheirfalcons
+		icon = GFX_goal_unknown
+		x = 4
+		y = 7
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = BEL_thelaststand 
+			focus = BEL_makethempayforeveryinch 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Elite Garrisons
+	focus = {
+		id = BEL_elitegarrisons
+		icon = GFX_goal_unknown
+		x = 0
+		y = 7
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = BEL_thelaststand }
 		ai_will_do = {
 			factor = 1
 		}
