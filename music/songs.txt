@@ -64,3 +64,11 @@ music = {
 		}		
 	}
 }
+music = {
+	song = "You_Fell_A_Victim"
+	chance = {
+		modifier = {
+			factor = 0.5
+		}		
+	}
+}

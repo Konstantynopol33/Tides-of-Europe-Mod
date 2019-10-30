@@ -1,6 +1,13 @@
 state={
 	id=419
 	name="STATE_419"
+
+	history={
+		owner = BUL
+		add_core_of = BUL
+
+	}
+
 	provinces={
 		2493 2583 2733 2755 
 	}
