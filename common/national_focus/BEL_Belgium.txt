@@ -1,0 +1,426 @@
+focus_tree = {
+	id = Belgium
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = BEL
+		}
+	}
+	#Focus for Request Equipment from Germany
+	focus = {
+		id = BEL_requestequipmentfromgermany
+		icon = GFX_goal_unknown
+		x = 22
+		y = 3
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = BEL_looktogermany }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Our Foreign Policy
+	focus = {
+		id = BEL_ourforeignpolicy
+		icon = GFX_goal_unknown
+		x = 18
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Lëtzebuerg Redoubts
+	focus = {
+		id = BEL_ltzebuergredoubts
+		icon = GFX_goal_unknown
+		x = 7
+		y = 3
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = BEL_donotyieldaninch }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Meuse Line
+	focus = {
+		id = BEL_meuseline
+		icon = GFX_goal_unknown
+		x = 1
+		y = 3
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = BEL_fortressflanders }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Do not Yield an Inch!
+	focus = {
+		id = BEL_donotyieldaninch
+		icon = GFX_goal_unknown
+		x = 6
+		y = 2
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = BEL_preparefortifications }
+		mutually_exclusive = { focus = BEL_fortressflanders }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Fortress Flanders
+	focus = {
+		id = BEL_fortressflanders
+		icon = GFX_goal_unknown
+		x = 2
+		y = 2
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = BEL_preparefortifications }
+		mutually_exclusive = { focus = BEL_donotyieldaninch }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Evacuate Wallonia
+	focus = {
+		id = BEL_evacuatewallonia
+		icon = GFX_goal_unknown
+		x = 4
+		y = 3
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = BEL_fortressflanders 
+			focus = BEL_donotyieldaninch 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Prepare Fortifications
+	focus = {
+		id = BEL_preparefortifications
+		icon = GFX_goal_unknown
+		x = 4
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Self-Sufficient Economy
+	focus = {
+		id = BEL_selfsufficienteconomy
+		icon = GFX_goal_unknown
+		x = 16
+		y = 3
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = BEL_declareneutrality }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Combat Unemployment
+	focus = {
+		id = BEL_combatunemployment
+		icon = GFX_goal_unknown
+		x = 20
+		y = 3
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = BEL_declareneutrality }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Request Equipment from Britain
+	focus = {
+		id = BEL_requestequipmentfrombritain
+		icon = GFX_goal_unknown
+		x = 14
+		y = 3
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = BEL_looktobritain }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Grants for Civilian Industry
+	focus = {
+		id = BEL_grantsforcivilianindustry
+		icon = GFX_goal_unknown
+		x = 16
+		y = 5
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = BEL_selfsufficienteconomy }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Arms Industry
+	focus = {
+		id = BEL_armsindustry
+		icon = GFX_goal_unknown
+		x = 20
+		y = 5
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = BEL_combatunemployment }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Liquidate Wallonian Industry
+	focus = {
+		id = BEL_liquidatewallonianindustry
+		icon = GFX_goal_unknown
+		x = 3
+		y = 4
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = BEL_evacuatewallonia }
+		mutually_exclusive = { focus = BEL_fortifymajorindustrialcenters }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Fortify Major Industrial Centers
+	focus = {
+		id = BEL_fortifymajorindustrialcenters
+		icon = GFX_goal_unknown
+		x = 5
+		y = 4
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = BEL_evacuatewallonia }
+		mutually_exclusive = { focus = BEL_liquidatewallonianindustry }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Evacuate Gold Reserves
+	focus = {
+		id = BEL_evacuategoldreserves
+		icon = GFX_goal_unknown
+		x = 4
+		y = 5
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = BEL_liquidatewallonianindustry 
+			focus = BEL_fortifymajorindustrialcenters 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Fortress Antwerp
+	focus = {
+		id = BEL_fortressantwerp
+		icon = GFX_goal_unknown
+		x = 1
+		y = 4
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = BEL_meuseline }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Holland Line
+	focus = {
+		id = BEL_hollandline
+		icon = GFX_goal_unknown
+		x = 7
+		y = 4
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = BEL_ltzebuergredoubts }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Look to Britain
+	focus = {
+		id = BEL_looktobritain
+		icon = GFX_goal_unknown
+		x = 12
+		y = 2
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = BEL_ourforeignpolicy }
+		mutually_exclusive = { focus = BEL_declareneutrality }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Declare Neutrality
+	focus = {
+		id = BEL_declareneutrality
+		icon = GFX_goal_unknown
+		x = 18
+		y = 2
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = BEL_ourforeignpolicy }
+		mutually_exclusive = { 
+			focus = BEL_looktobritain 
+		}
+		mutually_exclusive = { 
+			focus = BEL_looktogermany 
+		}
+		mutually_exclusive = { 
+			focus = BEL_ 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Look to Germany
+	focus = {
+		id = BEL_looktogermany
+		icon = GFX_goal_unknown
+		x = 24
+		y = 2
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = BEL_ourforeignpolicy }
+		mutually_exclusive = { focus = BEL_declareneutrality }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Closed Borders
+	focus = {
+		id = BEL_closedborders
+		icon = GFX_goal_unknown
+		x = 18
+		y = 4
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = BEL_looktobritain 
+			focus = BEL_declareneutrality 
+			focus = BEL_looktogermany 
+		}
+		mutually_exclusive = { 
+			focus = BEL_eupenforaccess 
+		}
+		mutually_exclusive = { 
+			focus = BEL_offeraccess 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Bow to Germany
+	focus = {
+		id = BEL_bowtogermany
+		icon = GFX_goal_unknown
+		x = 26
+		y = 3
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = BEL_looktogermany }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Bow to Britain
+	focus = {
+		id = BEL_bowtobritain
+		icon = GFX_goal_unknown
+		x = 10
+		y = 3
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = BEL_looktobritain }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Offer Access
+	focus = {
+		id = BEL_offeraccess
+		icon = GFX_goal_unknown
+		x = 12
+		y = 4
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = BEL_requestequipmentfrombritain 
+		}
+		prerequisite = { 
+			focus = BEL_bowtobritain 
+		}
+		mutually_exclusive = { 
+			focus = BEL_closedborders 
+		}
+		mutually_exclusive = { 
+			focus = BEL_eupenforaccess 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Eupen for Access
+	focus = {
+		id = BEL_eupenforaccess
+		icon = GFX_goal_unknown
+		x = 22
+		y = 4
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = BEL_bowtogermany 
+		}
+		prerequisite = { 
+			focus = BEL_requestequipmentfromgermany 
+		}
+		mutually_exclusive = { 
+			focus = BEL_closedborders 
+		}
+		mutually_exclusive = { 
+			focus = BEL_offeraccess 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+#End of focuses 
+ }
